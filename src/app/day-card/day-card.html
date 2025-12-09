@@ -1,0 +1,50 @@
+<div class="card">
+    <div class="card-header">
+        <h2>{{dayData().title}}</h2>
+
+        <div class="button" (click)="runDay(dayData().dayNumber)">
+            <h4>Run whole day</h4>
+            <span class="material-symbols-outlined"> play_arrow </span>
+        </div>
+    </div>
+
+    <div class="card-body">
+        <div class="part-line">
+            <h3>Part 1</h3>
+            <h4>
+                {{getPartCompletionStatusText(dayData().part1Solution.partCompletionStatus)}}
+            </h4>
+
+            <h4>
+                {{dayData().part1Solution.solutionTimeInMs ?
+                dayData().part1Solution.solutionTimeInMs + ' ms' : 'N/A'}}
+            </h4>
+
+            <h4>{{dayData().part1Solution.solution ?? 'N/A'}}</h4>
+
+            <div class="button" (click)="runPart1(dayData().dayNumber)">
+                <h4>Run</h4>
+                <span class="material-symbols-outlined"> play_arrow </span>
+            </div>
+        </div>
+        <hr />
+        <div class="part-line">
+            <h3>Part 2</h3>
+            <h4>
+                {{getPartCompletionStatusText(dayData().part2Solution.partCompletionStatus)}}
+            </h4>
+
+            <h4>
+                {{dayData().part2Solution.solutionTimeInMs ?
+                dayData().part2Solution.solutionTimeInMs + ' ms' : 'N/A'}}
+            </h4>
+
+            <h4>{{dayData().part2Solution.solution ?? 'N/A'}}</h4>
+
+            <div class="button" (click)="runPart2(dayData().dayNumber)">
+                <h4>Run</h4>
+                <span class="material-symbols-outlined"> play_arrow </span>
+            </div>
+        </div>
+    </div>
+</div>

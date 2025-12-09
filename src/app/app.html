@@ -1,0 +1,9 @@
+<div class="header">
+    <h1>Advent of Code 2025</h1>
+</div>
+
+<div class="content">
+    @for (dayData of allDaysData(); track dayData.dayNumber) {
+    <app-day-card [dayData]="dayData"></app-day-card>
+    }
+</div>

@@ -1,0 +1,33 @@
+.card {
+    background-color: var(--background-card);
+    border-radius: 4px;
+    margin: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+    background-color: var(--background-card-header);
+    padding: 8px 16px;
+    border-radius: 4px 4px 0 0;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--color-text);
+}
+
+.card-body {
+    // padding: 16px;
+    color: var(--color-text);
+
+    hr {
+        margin: 0;
+    }
+}
+
+.part-line {
+    padding: 14px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
